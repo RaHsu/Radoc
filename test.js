@@ -1,4 +1,10 @@
-const json = require('./modules/json');
-const config = json.readConfig('package.json');
+const re = require('./modules/re');
+const fs = require('fs');
 
-console.log(config.name);
+var html = fs.readFileSync('./static/template/tem.html').toString();
+
+var replacement = "<a href='fdsfd.html'>";
+//var hh = html.replace(re.formExp('replace'),replacement);
+
+html = re.replace(html,'replace',replacement);
+console.log(html);
