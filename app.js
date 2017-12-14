@@ -3,27 +3,25 @@ const fs = require("fs");
 
 //生成目录
 
+
+
 var href, name, a;
+
 fs.readdir('source/', function (err, files) {
     var dir = "";
     for (let i = 0; i < files.length; i++) {
-
         if (files[i].slice(-3, -1) === '.m') {
             href = files[i].slice(0, -3) + '.html';
             name = files[i].slice(0, -3);
             a = `<a href="${href}">${name}</a></br>`;
-
             dir += a;
         }
-
-
     }
-    //console.log('dir:'+dir);
 
     var index = `<!DOCTYPE html>
     <html>
     <head>
-	    <title></title>
+    	<title></title>
 	    <link rel="stylesheet" type="text/css" href="stylesheets/apollo.css">
     </head>
     <body>
@@ -41,8 +39,6 @@ fs.readdir('source/', function (err, files) {
         }
     })
 })
-
-
 //生成文件
 fs.readdir('source/', function (err, files) {
     for (let i = 0; i < files.length; i++) {
@@ -65,15 +61,19 @@ function write(source, outfile) {
         // 读模板文件并将内容存在变量中
 
         var tmp = `<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/apollo.css">
-</head>
-<body>
-	${out}
-</body>
-</html>`;
+        <html>
+        <head>
+        	<title></title>
+        	<link rel="stylesheet" type="text/css" href="stylesheets/md.css">
+        </head>
+        <body>
+        	<article class="post-block">
+        		<div class="post-content">
+        			${out}
+        		</div>
+        	</article>
+        </body>
+        </html>`;
 
         //开始写文件
         fs.writeFile(outfile, tmp, function (err, data) {
@@ -81,11 +81,8 @@ function write(source, outfile) {
                 return console.error('文件写入失败');
             }
             else {
-                console.log("写入成功");
+                console.log(outfile+"写入成功");
             }
-
-
         })
     });
 }
-
