@@ -1,10 +1,15 @@
-const re = require('./modules/re');
 const fs = require('fs');
+const md = require("markdown-it")();
+let mark = `
+    \`\`\`js
+    function(){
+        var a = 0
+        return a;
+    }
+    \`\`\`
+`;
 
-var html = fs.readFileSync('./static/template/tem.html').toString();
 
-var replacement = "<a href='fdsfd.html'>";
-//var hh = html.replace(re.formExp('replace'),replacement);
-
-html = re.replace(html,'replace',replacement);
-console.log(html);
+var out = md.render(mark);
+console.log(mark);
+console.log(out);

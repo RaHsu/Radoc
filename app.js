@@ -1,5 +1,7 @@
 const md = require("markdown-it")();
 const fs = require("fs");
+const re = require("./modules/re");
+const json = require("./modules/json");
 
 //生成目录
 
