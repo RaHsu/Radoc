@@ -3,10 +3,11 @@ const fs = require("fs");
 const re = require("./modules/re");
 const json = require("./modules/json");
 
+// 读取配置文件
+const config = json.readConfig('site-config.json');
+
+
 //生成目录
-
-
-
 var href, name, a;
 
 fs.readdir('source/', function (err, files) {
@@ -30,7 +31,6 @@ fs.readdir('source/', function (err, files) {
 	    ${dir}
     </body>
     </html>`;
-//console.log(index);
     // 写入目录
     fs.writeFile('publish/index.html', index, function (err, data) {
         if (err) {
@@ -41,6 +41,8 @@ fs.readdir('source/', function (err, files) {
         }
     })
 })
+
+
 //生成文件
 fs.readdir('source/', function (err, files) {
     for (let i = 0; i < files.length; i++) {

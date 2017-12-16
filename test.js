@@ -1,15 +1,5 @@
 const fs = require('fs');
 const md = require("markdown-it")();
-let mark = `
-    \`\`\`js
-    function(){
-        var a = 0
-        return a;
-    }
-    \`\`\`
-`;
+const file = require("./modules/file");
 
-
-var out = md.render(mark);
-console.log(mark);
-console.log(out);
+file.writeMd();
