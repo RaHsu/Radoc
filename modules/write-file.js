@@ -30,8 +30,9 @@ exports.writeMd = function(file_name){
      writeStream = re.replace(writeStream,"content",content);
 
      //写入文件
-     fs.writeFile(publish_path+out_file_name,writeStream,function(err){
+     fs.writeFile(publish_path + out_file_name,writeStream,function(err){
          if(err){
+             console.log(out_file_name+'写入失败');
              console.log(err);
          }
          else{
