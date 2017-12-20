@@ -14,10 +14,10 @@ exports.analysis_config = function(config){
     let out_config = {};
 
     // 路径信息
-    let css_path = './css/';
-    let code_style_path = './css/code_style/';
+    let css_path = 'css/';
+    let code_style_path = 'css/code_styles/';
 
-    //主题解析
+    //theme解析
     out_config.theme = css_path + config.theme + '.css';
 
     // code_style解析
