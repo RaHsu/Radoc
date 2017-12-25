@@ -18,16 +18,27 @@ exports.writeMd = function(file_name){
      //首先读取模板文件
      let template = fs.readFileSync("./static/template/md.html").toString();
 
-     // 将模板文件中配置项替换掉
-     let writeStream = re.replace(template,"theme",config.theme);
-     writeStream = re.replace(writeStream,"code_theme",config.code_theme);
-
      // 读取md正文内容并解析为html
      let prime_content = fs.readFileSync(source_path+file_name).toString();
      let content = md.render(prime_content);
 
-     // 替换掉模板中的content
-     writeStream = re.replace(writeStream,"content",content);
+     // 设置配置替换项
+     const md_config = [
+         {
+             replace_pattern:"theme",
+             value:config.theme
+         },{
+             replace_pattern:"code_theme",
+             value:config.code_theme
+         },{
+             replace_pattern:"content",
+             value:content
+         }
+     ];
+
+     // 将模板文件中配置项替换掉
+     let writeStream = re.replaceAll(template,md_config);
+
 
      //写入文件
      fs.writeFile(publish_path + out_file_name,writeStream,function(err){
