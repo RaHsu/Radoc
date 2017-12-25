@@ -11,3 +11,13 @@ exports.replace = function (string,replace_pattern,value){
     let out_string = string.replace(exports.formExp(replace_pattern),value);
     return out_string;
 }
+
+// 将一个数组中的配置项全部替换掉
+exports.replaceAll = function(string,config_array){
+    let replaced_string = string;
+    for(let i in config_array){
+        replaced_string = exports.replace(replaced_string,config_array[i].replace_pattern,config_array[i].value);
+    }
+
+    return replaced_string;
+}
