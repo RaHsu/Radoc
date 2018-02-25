@@ -2,7 +2,18 @@
 @import "normalize.css";
 
 // 主题颜色设置
-@theme-color:#4fc08d;
+@theme-color: #4fc08d;
+
+// 常用工具颜色
+@title-color: #1c2438;
+@content-color: #495060;
+@sub-color: #80848f;
+@disable-color: #bbbec4;
+
+// 字体大小初始化
+html{
+    font-size: 100%;
+}
 
 //header部分
 //工具类
@@ -13,5 +24,38 @@
     float: right;
 }
 #header{
-    height: 150px;
+    height: 40px;
+    padding: 15px 40px;
+    background-color: red;
+
+    //logo组件
+    #logo{
+        height: 40px;
+        line-height: 40px;
+        color:@content-color;
+        overflow:hidden;
+
+        &:after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        // 以文字为logo
+        span{
+            float: left;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 10px;
+            font-size: 2em;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        }
+        // 以图片为logo
+        img{
+            height: 40px;
+            top: 0px;
+            float: left;
+
+        }
+    }
 }
