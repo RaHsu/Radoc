@@ -2,7 +2,9 @@
 @import "normalize.css";
 
 // 主题颜色设置
-@theme-color: #4fc08d;
+//@theme-color: #4fc08d;
+@theme-color: red;
+
 
 // 常用工具颜色
 @title-color: #1c2438;
@@ -17,6 +19,15 @@ html{
 
 //header部分
 //工具类
+.clearfix() {
+    &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+
 .header-left{
     float: left;
 }
@@ -25,21 +36,17 @@ html{
 }
 #header{
     height: 40px;
-    padding: 15px 40px;
-    background-color: red;
+    padding: 15px 50px;
+    background-color: white;
 
     //logo组件
-    #logo{
+    .logo{
         height: 40px;
         line-height: 40px;
         color:@content-color;
         overflow:hidden;
 
-        &:after{
-            content: " ";
-            display: table;
-            clear: both;
-        }
+        .clearfix();
 
         // 以文字为logo
         span{
@@ -56,6 +63,85 @@ html{
             top: 0px;
             float: left;
 
+        }
+    }
+    .links{
+        height: 40px;
+        line-height: 40px;
+        margin-left: 30px;
+
+        a{
+            color: @content-color;
+            text-decoration: none;
+            padding: 5px 0px;
+            margin: 0 5px;
+            font-size: .95em;
+            font-weight: bold;
+
+            &:hover{
+                border-bottom: 2px solid @theme-color;
+            }
+        }
+        .dropdown{
+            margin-right: 10px;
+            display: inline;
+            position: relative;
+            .dropdown-nav:after{
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -1px;
+                margin-left: 6px;
+                margin-right: -14px;
+                width: 0;
+                height: 0;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 5px solid #ccc;
+            }
+
+            &:hover ul{
+                display: block;
+            }
+        }
+        ul{
+            display: none;
+            min-width: 100px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            padding-top: 10px;
+
+
+            li{
+                text-align: right;
+                list-style: none;
+                font-size: 1em;
+                :hover{
+                    color: @theme-color;
+                    border: none;
+                }
+            }
+        }
+        button{
+            background-color: #fff;
+            color: @theme-color;
+            border: 2px solid @theme-color;
+            border-radius: 15px;
+            padding: 5px 20px;
+            margin: 0 10px;
+            outline: none;
+            font-size: .95em;
+            font-weight: bold;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover{
+                background: @theme-color;
+                color: #fff;
+            }
         }
     }
 }
