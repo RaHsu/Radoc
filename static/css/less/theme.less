@@ -17,7 +17,7 @@ html{
     font-size: 100%;
 }
 
-//header部分
+
 //工具类
 .clearfix() {
     &:after {
@@ -27,7 +27,7 @@ html{
   }
 }
 
-
+//header部分
 .header-left{
     float: left;
 }
@@ -77,6 +77,8 @@ html{
             margin: 0 5px;
             font-size: .95em;
             font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: .3s;
 
             &:hover{
                 border-bottom: 2px solid @theme-color;
@@ -119,9 +121,13 @@ html{
                 text-align: right;
                 list-style: none;
                 font-size: 1em;
+                a{
+                    border-bottom: 2px solid transparent;
+                }
                 :hover{
                     color: @theme-color;
-                    border: none;
+                    border-bottom: 2px solid transparent;
+
                 }
             }
         }
@@ -142,6 +148,50 @@ html{
                 background: @theme-color;
                 color: #fff;
             }
+        }
+    }
+}
+
+//banner部分
+#banner{
+    padding-top: 50px;
+    .logo{
+        text-align: center;
+        p{
+            font-size: 3.5em;
+            margin: 0;
+            color: @content-color;
+        }
+        img{
+
+            height: 170px;
+        }
+    }
+    .intro{
+        font-size: 2em;
+        color: @content-color;
+        text-align: center;
+    }
+    .button-area{
+        text-align: center;
+        a{
+            text-decoration: none;
+        }
+        button{
+            display: inline;
+            background-color: @theme-color;
+            color: #fff;
+            border: 2px solid @theme-color;
+            border-radius: 40px;
+            font-size: 1.05em;
+            font-weight: bold;
+            padding: 10px 40px;
+            margin: 0 10px;
+            cursor: pointer;
+            outline: none;
+
+
+
         }
     }
 }
