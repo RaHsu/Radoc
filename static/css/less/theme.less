@@ -174,6 +174,7 @@ html{
     }
     .button-area{
         text-align: center;
+
         a{
             text-decoration: none;
         }
@@ -189,9 +190,81 @@ html{
             margin: 0 10px;
             cursor: pointer;
             outline: none;
+        }
+        .fa{
+            position: relative;
+            top: 10px;
+            color: @theme-color;
+        }
+        span{
+            color: @theme-color;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    }
+    .data{
+        padding: 70px 0 0 0;
+        text-align: center;
+        &>div{
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .number{
+            font-size: 2em;
+            font-weight: lighter;
+            color: @theme-color;
+            font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+
+            &::after{
+                content: "\A";
+                white-space: pre;
+            }
+
+        }
+        .label{
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: lighter;
+            line-height: 40px;
+            color: @sub-color;
+        }
+    }
+}
+
+//content部分
+#content{
+    //宽度辅助类
+
+    padding: 70px 100px;
+    .title{
+        text-align: center;
+        font-weight: lighter;
+    }
+    .feature{
+        margin: 0;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 20%;
+        padding: 20px 0;
+        text-align: center;
 
 
+        img{
+            height: 70px;
+        }
+        h3{
+            font-size: 2em;
+            font-weight: lighter;
+            color: @theme-color;
+            font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
 
+        }
+        p{
+            font-size: .95em;
+            line-height: 1.5em;
+            color: @content-color;
+            padding: 0 20px;
         }
     }
 }
