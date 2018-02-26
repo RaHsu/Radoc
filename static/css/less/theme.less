@@ -235,6 +235,18 @@ html{
 //content部分
 #content{
     //宽度辅助类
+    .feature-col-1{
+        width: 100%;
+    }
+    .feature-col-2,.feature-col-4,.feature-col-8{
+        width: 50%;
+    }
+    .feature-col-3,.feature-col-6,.feature-col-9{
+        width: 33.3%
+    }
+    .feature-col-5,.feature-col-10{
+        width: 20%;
+    }
 
     padding: 70px 100px;
     .title{
@@ -242,10 +254,11 @@ html{
         font-weight: lighter;
     }
     .feature{
+        .clearfix();
         margin: 0;
-        display: inline-block;
+        float: left;
         box-sizing: border-box;
-        width: 20%;
+        width: 33.3%;
         padding: 20px 0;
         text-align: center;
 
@@ -254,7 +267,7 @@ html{
             height: 70px;
         }
         h3{
-            font-size: 2em;
+            font-size: 1.75em;
             font-weight: lighter;
             color: @theme-color;
             font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -262,7 +275,7 @@ html{
         }
         p{
             font-size: .95em;
-            line-height: 1.5em;
+            line-height: 2em;
             color: @content-color;
             padding: 0 20px;
         }
