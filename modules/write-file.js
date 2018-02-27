@@ -4,7 +4,7 @@ const re = require("./re");
 const md = require("markdown-it")();
 
 // 读取配置文件并解析配置项
-const prime_config = json.readConfig('site-config.json');
+const prime_config = require('./../site-config.json');
 const config = json.analysis_config(prime_config);
 
 
