@@ -1,4 +1,5 @@
 {
     "theme":"apollo",
-    "code_theme":"arduino-light"
+    "code_theme":"arduino-light",
+    "theme_color":"#f00"
 }

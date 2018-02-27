@@ -16,5 +16,8 @@ exports.analysis_config = function(config){
     // code_style解析
     out_config.code_theme = code_style_path + config.code_theme + '.css';
 
+    //theme_color解析
+    out_config.theme_color = config.theme_color;
+
     return out_config;
 }
