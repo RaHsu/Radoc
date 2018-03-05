@@ -1,0 +1,320 @@
+@import "normalize.css";
+html {
+  font-size: 100%;
+}
+.header-left {
+  float: left;
+}
+.header-right {
+  float: right;
+}
+#header {
+  height: 40px;
+  padding: 15px 50px;
+  background-color: white;
+}
+#header .logo {
+  height: 40px;
+  line-height: 40px;
+  color: #495060;
+  overflow: hidden;
+}
+#header .logo:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+#header .logo span {
+  float: left;
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 2em;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+#header .logo img {
+  height: 40px;
+  top: 0px;
+  float: left;
+}
+#header .links {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 30px;
+}
+#header .links a {
+  color: #495060;
+  text-decoration: none;
+  padding: 5px 0px;
+  margin: 0 5px;
+  font-size: .95em;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: .3s;
+}
+#header .links a:hover {
+  border-bottom: 2px solid red;
+}
+#header .links .dropdown {
+  margin-right: 10px;
+  display: inline;
+  position: relative;
+}
+#header .links .dropdown .dropdown-nav:after {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -1px;
+  margin-left: 6px;
+  margin-right: -14px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #ccc;
+}
+#header .links .dropdown:hover ul {
+  display: block;
+}
+#header .links ul {
+  display: none;
+  min-width: 100px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding-top: 10px;
+}
+#header .links ul li {
+  text-align: right;
+  list-style: none;
+  font-size: 1em;
+}
+#header .links ul li a {
+  border-bottom: 2px solid transparent;
+}
+#header .links ul li :hover {
+  color: red;
+  border-bottom: 2px solid transparent;
+}
+#header .links button {
+  background-color: #fff;
+  color: red;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  outline: none;
+  font-size: .95em;
+  font-weight: bold;
+  transition: .3s;
+  cursor: pointer;
+}
+#header .links button:hover {
+  background: red;
+  color: #fff;
+}
+#banner {
+  padding-top: 50px;
+}
+#banner .logo {
+  text-align: center;
+}
+#banner .logo p {
+  font-size: 3.5em;
+  margin: 0;
+  color: #495060;
+}
+#banner .logo img {
+  height: 170px;
+}
+#banner .intro {
+  font-size: 2em;
+  color: #495060;
+  text-align: center;
+}
+#banner .button-area {
+  text-align: center;
+}
+#banner .button-area a {
+  text-decoration: none;
+}
+#banner .button-area button {
+  display: inline;
+  background-color: red;
+  color: #fff;
+  border: 2px solid red;
+  border-radius: 40px;
+  font-size: 1.05em;
+  font-weight: bold;
+  padding: 10px 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  outline: none;
+}
+#banner .button-area .fa {
+  position: relative;
+  top: 10px;
+  color: red;
+}
+#banner .button-area span {
+  color: red;
+  font-weight: bold;
+  padding-left: 10px;
+}
+#banner .data {
+  padding: 70px 0 0 0;
+  text-align: center;
+}
+#banner .data > div {
+  display: inline-block;
+  padding: 0 40px;
+}
+#banner .data .number {
+  font-size: 2em;
+  font-weight: lighter;
+  color: red;
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+#banner .data .number::after {
+  content: "\A";
+  white-space: pre;
+}
+#banner .data .label {
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 40px;
+  color: #80848f;
+}
+#content {
+  padding: 70px 100px;
+}
+#content .title {
+  text-align: center;
+  font-weight: lighter;
+  color: #1c2438;
+}
+#content .subtitle {
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: lighter;
+  color: #80848f;
+}
+#content .features .feature-col-1 {
+  width: 100%;
+}
+#content .features .feature-col-2,
+#content .features .feature-col-4,
+#content .features .feature-col-8 {
+  width: 50%;
+}
+#content .features .feature-col-3,
+#content .features .feature-col-6,
+#content .features .feature-col-9 {
+  width: 33.3%;
+}
+#content .features .feature-col-5,
+#content .features .feature-col-10 {
+  width: 20%;
+}
+#content .features:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+#content .features .feature {
+  margin: 0;
+  float: left;
+  box-sizing: border-box;
+  width: 33.3%;
+  padding: 20px 0;
+  text-align: center;
+}
+#content .features .feature img {
+  height: 70px;
+}
+#content .features .feature h1 {
+  color: red;
+}
+#content .features .feature h3 {
+  font-size: 1.75em;
+  font-weight: lighter;
+  color: red;
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol-apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+#content .features .feature p {
+  font-size: .95em;
+  line-height: 2em;
+  color: #495060;
+  padding: 0 20px;
+}
+#content .button {
+  text-align: center;
+  padding: 60px 0;
+}
+#content .button button {
+  background-color: #fff;
+  color: red;
+  border: 2px solid red;
+  padding: 13px 35px;
+  outline: none;
+  font-weight: bold;
+  transition: .3s;
+}
+#content .button button:hover {
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+#footer {
+  background-color: #7f8c8d;
+  padding: 30px 0;
+}
+#footer .links {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#footer .links a {
+  font-size: .85em;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 5px;
+  transition: .3s;
+}
+#footer .links a:hover {
+  color: red;
+}
+#footer .links a > span {
+  font-size: 1.25em;
+}
+#footer .text {
+  text-align: center;
+  color: #fff;
+  font-size: .95em;
+  margin: 0;
+}
+#footer .text a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+#footer .text a:hover {
+  color: red;
+}
+#footer .copyright {
+  text-align: center;
+  color: white;
+  font-size: .8em;
+  font-weight: lighter;
+}
+#footer .copyright a {
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+#footer .copyright a:hover {
+  color: red;
+}
