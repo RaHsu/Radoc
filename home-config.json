@@ -9,6 +9,33 @@
                 "type":"text",
                 "content":"Radoc"
             }
+        ],
+        "links":[
+            {
+                "type":"link",
+                "href":"#",
+                "text":"学习"
+            },
+            {
+                "type":"link",
+                "href":"#",
+                "text":"学习"
+            },{
+                "type":"dropdown",
+                "children":[
+                    {
+                        "href":"#",
+                        "text":"学习"
+                    },{
+                        "href":"#",
+                        "text":"团队"
+                    },{
+                        "href":"#",
+                        "text":"生态系统"
+                    },
+                ]
+            }
+
         ]
     }
 }
