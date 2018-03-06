@@ -10,32 +10,37 @@
                 "content":"Radoc"
             }
         ],
-        "links":[
-            {
-                "type":"link",
-                "href":"#",
-                "text":"学习"
-            },
-            {
-                "type":"link",
-                "href":"#",
-                "text":"学习"
-            },{
-                "type":"dropdown",
-                "children":[
-                    {
-                        "href":"#",
-                        "text":"学习"
-                    },{
-                        "href":"#",
-                        "text":"团队"
-                    },{
-                        "href":"#",
-                        "text":"生态系统"
-                    },
-                ]
-            }
+        "links":{
+            "position":"right",
+            "children":[
+                {
+                    "type":"link",
+                    "href":"#",
+                    "text":"学习"
+                },
+                {
+                    "type":"link",
+                    "href":"#",
+                    "text":"团队"
+                },{
+                    "type":"dropdown",
+                    "text":"多语言",
+                    "children":[
+                        {
+                            "href":"http://www.baidu.com",
+                            "text":"学习"
+                        },{
+                            "href":"www.baidu.com",
+                            "text":"团队"
+                        },{
+                            "href":"www.baidu.com",
+                            "text":"生态系统"
+                        }
+                    ]
+                }
 
-        ]
+            ]
+        }
+
     }
 }
