@@ -4,10 +4,7 @@
         "logo":[
             {
                 "type":"img",
-                "scr":""
-            },{
-                "type":"icon",
-                "icon-name":"github"
+                "src":"trecer.jpg"
             },{
                 "type":"text",
                 "content":"Radoc"
