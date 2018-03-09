@@ -42,5 +42,27 @@
             ]
         }
 
+    },
+    "banner":{
+        "logo":[
+            {
+                "type":"img",
+                "src":"trecer.jpg"
+            },{
+                "type":"text",
+                "content":"Radoc"
+            }
+        ],
+        "intro":"简洁，高效，快捷的文档框架。",
+        "buttons":[
+            {
+                "type":"basic",
+                "text":"快速入门",
+                "href":"http://www.qq.com"
+            },{
+                "type":"github",
+                "href":"https://github.com/RaHsu/Radoc"
+            }
+        ]
     }
 }

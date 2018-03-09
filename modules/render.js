@@ -17,6 +17,12 @@ let template = {
         logo:'<div class="logo header-left"></div>',
         links:'<div class="links"></div>',
         dropdown:'<div class="dropdown"></div>'
+    },
+    banner:{
+        self:'<div id="banner"></div>',
+        logo:'<div class="logo"></div>',
+        intro:'<p class="intro"></p>',
+        button_area:'<div class="button-area"></div>'
     }
 };
 
@@ -25,6 +31,10 @@ let $ = cheerio.load(fs.readFileSync('./../static/template/home.html'));
 
 
 // 对各个模块的解析
+function render(){
+    setHeader();
+    setBanner();
+}
 // header部分
 function setHeader(){
     if(home_config.header){
@@ -89,7 +99,6 @@ function setHeaderLinks(){
                     $('#header .links .dropdown').append(dropdown);
                     $('#header .links .dropdown').append(template.basic.ul);
                     for(let children of i.children){
-                        console.log(children);
                         let a = `<li><a href="${children.href}">${children.text}</a></li>`;
                         $('#header .links .dropdown ul').append(a);
                     }
@@ -101,7 +110,70 @@ function setHeaderLinks(){
     }
 }
 
-setHeader();
+// banner部分
+function setBanner(){
+    if(home_config.banner){
+        $('body').append(template.banner.self);
+        setBannerLogo();
+        setBannerIntro();
+        setBannerButtonArea();
+    }
+
+}
+// banner的logo解析
+function setBannerLogo(){
+    if(home_config.banner.logo){
+        $('#banner').append(template.banner.logo);
+        let logo = home_config.banner.logo;
+        for(let i of logo){
+            if(i.type === 'img'){
+                $('#banner .logo').append(template.basic.img);
+                $('#banner .logo img').attr('src',i.src);
+            }
+            if(i.type === 'icon'){
+                $('#banner .logo').append(template.basic.i);
+                $('#banner .logo i').addClass('fa fa-' + i.icon_name);
+                if(i.color){
+                    $('#banner .logo i').attr('style','color:' + i.color + ';');
+                }
+            }
+            if(i.type === 'text'){
+                $('#banner .logo').append(template.basic.p);
+                $('#banner .logo p').text(i.content);
+            }
+        }
+    }
+}
+// banner的intro解析
+function setBannerIntro(){
+    if(home_config.banner.intro){
+        $('#banner').append(template.banner.intro);
+        $('#banner .intro').text(home_config.banner.intro);
+    }
+}
+
+// banner的button-area的解析
+function setBannerButtonArea(){
+    if(home_config.banner.buttons){
+        $('#banner').append(template.banner.button_area);
+        let buttons = home_config.banner.buttons;
+        for(let i of buttons){
+            if(i.type === 'basic'){
+                let button = `<a href="${i.href}"><button>${i.text}</button></a>`;
+                console.log(button);
+                $('#banner .button-area').append(button);
+            }
+            if(i.type === 'github'){
+                let button = `<a href="${i.href}"><i class="fa fa-github fa-3x"></i><span>Github</span></a>`;
+                console.log(button);
+                $('#banner .button-area').append(button);
+            }
+        }
+
+    }
+}
+
+render();
 
 //console.log($.html());
 
