@@ -63,6 +63,21 @@
                 "type":"github",
                 "href":"https://github.com/RaHsu/Radoc"
             }
+        ],
+        "datas":[
+            {
+                "data":"1000+",
+                "label":"stars"
+            },{
+                "data":"1000+",
+                "label":"stars"
+            },{
+                "data":"1000+",
+                "label":"stars"
+            },{
+                "data":"1000+",
+                "label":"stars"
+            }
         ]
     }
 }

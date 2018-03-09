@@ -22,7 +22,8 @@ let template = {
         self:'<div id="banner"></div>',
         logo:'<div class="logo"></div>',
         intro:'<p class="intro"></p>',
-        button_area:'<div class="button-area"></div>'
+        button_area:'<div class="button-area"></div>',
+        datas:'<div class="datas"></div>'
     }
 };
 
@@ -117,6 +118,7 @@ function setBanner(){
         setBannerLogo();
         setBannerIntro();
         setBannerButtonArea();
+        setBannerDatas();
     }
 
 }
@@ -160,12 +162,10 @@ function setBannerButtonArea(){
         for(let i of buttons){
             if(i.type === 'basic'){
                 let button = `<a href="${i.href}"><button>${i.text}</button></a>`;
-                console.log(button);
                 $('#banner .button-area').append(button);
             }
             if(i.type === 'github'){
                 let button = `<a href="${i.href}"><i class="fa fa-github fa-3x"></i><span>Github</span></a>`;
-                console.log(button);
                 $('#banner .button-area').append(button);
             }
         }
@@ -173,6 +173,20 @@ function setBannerButtonArea(){
     }
 }
 
+// banner的datas解析
+function setBannerDatas(){
+    if(home_config.banner.datas){
+        $('#banner').append(template.banner.datas);
+        let datas = home_config.banner.datas;
+        for(let i of datas){
+            let data = `<div>
+                <span class="number">${i.data}</span>
+                <span class="label">${i.label}</span>
+            </div>`;
+            $('#banner .datas').append(data);
+        }
+    }
+}
 render();
 
 //console.log($.html());
