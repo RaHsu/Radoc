@@ -52,45 +52,78 @@ exports.writeMd = function(file_name){
      })
  }
 
-// 复制文件夹
-exports.copyDir = function(src, dst, callback){
-    fs.exists(det, function(exists){
-       if(exists){
-           callback(src, dst);
-       }else {
-           fs.mkdir(dst, function(){
-               callback(src, dst);
-           });
-        }
-    });
-};
 
-// 复制文件函数
-exports.copy = function(src, path){
+
+// 复制文件夹
+exports.copyDir = function(src, dst){
+    if(!fs.existsSync(dst)){
+        fs.mkdirSync(dst);
+    }
+    
     fs.readdir(src, function(err, paths){
         if(err){
-            console.log(src+'复制失败');
-            console.log(err);
+            throw err;
         }
         paths.forEach(function(path){
             let _src = src + '/' + path,
                 _dst = dst + '/' + path,
-                readable,writable;
+                st = fs.statSync(_src);
 
-            status(_src, function(err, st){
-                if(err){
-                    throw err;
-                }
-                if(st.isFile){
-                    readable = fs.createReadStream(_src);
-                    writable = fs.createWriteStream(_dst);
-                    readable.pipe(writable);
-                }
-                else if(st.isDirectory()){
-                    exports.copyDir(_src, _dst, copy);
-                }
-            })
-        });
+            if(st.isFile()){
+                fs.copyFileSync(_src, _dst);
+            }else if(st.isDirectory()){
+                fs.mkdirSync(_dst);
+                
+                copyDir(_src, _dst);
+            }
+        })
     })
 }
+
+exports.copyFile = function(src, dst){
+    fs.copyFileSync(src, dst);
+}
+
+
+// // 复制文件夹
+// exports.copyDir = function(src, dst, callback){
+//     fs.exists(det, function(exists){
+//        if(exists){
+//            callback(src, dst);
+//        }else {
+//            fs.mkdir(dst, function(){
+//                callback(src, dst);
+//            });
+//         }
+//     });
+// };
+
+// // 复制文件函数
+// exports.copy = function(src, dst){
+//     fs.readdir(src, function(err, paths){
+//         if(err){
+//             console.log(src+'复制失败');
+//             console.log(err);
+//         }
+//         paths.forEach(function(path){
+//             let _src = src + '/' + path,
+//                 _dst = dst + '/' + path,
+//                 readable,writable;
+
+//             status(_src, function(err, st){
+//                 if(err){
+//                     throw err;
+//                 }
+//                 if(st.isFile){
+//                     readable = fs.createReadStream(_src);
+//                     writable = fs.createWriteStream(_dst);
+//                     readable.pipe(writable);
+//                 }
+//                 else if(st.isDirectory()){
+//                     exports.copyDir(_src, _dst, copy);
+//                 }
+//             })
+//         });
+//     })
+// }
 
