@@ -1,0 +1,373 @@
+// 样式重置
+@import "normalize.css";
+
+// 主题颜色设置
+//@theme-color: #4fc08d;
+@theme-color: red;
+
+
+// 常用工具颜色
+@title-color: #1c2438;
+@content-color: #495060;
+@sub-color: #80848f;
+@disable-color: #bbbec4;
+
+// 字体大小初始化
+html{
+    font-size: 100%;
+    margin: 0;
+}
+
+
+//工具类
+.clearfix() {
+    &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+//header部分
+.header-left{
+    float: left;
+}
+.header-right{
+    float: right;
+}
+#header{
+    height: 40px;
+    padding: 15px 50px;
+    background-color: white;
+
+    //logo组件
+    .logo{
+        height: 40px;
+        line-height: 40px;
+        color:@content-color;
+        overflow:hidden;
+
+        .clearfix();
+
+        // 以文字为logo
+        span{
+            float: left;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 10px;
+            font-size: 2em;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        }
+        // 以图片为logo
+        img{
+            height: 40px;
+            top: 0px;
+            float: left;
+
+        }
+        // 以图标为logo
+        i{
+            font-size: 2em;
+            float: left;
+            line-height: 1.2em;
+            color: @theme-color;
+        }
+    }
+    .links{
+        height: 40px;
+        line-height: 40px;
+        margin-left: 30px;
+
+        a{
+            color: @content-color;
+            text-decoration: none;
+            padding: 5px 0px;
+            margin: 0 5px;
+            font-size: .95em;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: .3s;
+
+            &:hover{
+                border-bottom: 2px solid @theme-color;
+            }
+        }
+        .dropdown{
+            margin-right: 10px;
+            display: inline;
+            position: relative;
+            .dropdown-nav:after{
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -1px;
+                margin-left: 6px;
+                margin-right: -14px;
+                width: 0;
+                height: 0;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 5px solid #ccc;
+            }
+
+            &:hover ul{
+                display: block;
+            }
+        }
+        ul{
+            display: none;
+            min-width: 100px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            padding-top: 10px;
+
+
+            li{
+                text-align: right;
+                list-style: none;
+                font-size: 1em;
+                a{
+                    border-bottom: 2px solid transparent;
+                }
+                :hover{
+                    color: @theme-color;
+                    border-bottom: 2px solid transparent;
+
+                }
+            }
+        }
+
+    }
+}
+
+//banner部分
+#banner{
+    padding-top: 50px;
+    .logo{
+        text-align: center;
+        p{
+            font-size: 3.5em;
+            margin: 0;
+            color: @content-color;
+        }
+        img{
+            height: 170px;
+        }
+        i{
+            font-size: 7em;
+            color: @theme-color;
+        }
+    }
+    .intro{
+        font-size: 2em;
+        color: @content-color;
+        text-align: center;
+    }
+    .button-area{
+        text-align: center;
+
+        a{
+            text-decoration: none;
+        }
+        button{
+            display: inline;
+            background-color: @theme-color;
+            color: #fff;
+            border: 2px solid @theme-color;
+            border-radius: 40px;
+            font-size: 1.05em;
+            font-weight: bold;
+            padding: 10px 40px;
+            margin: 0 10px;
+            cursor: pointer;
+            outline: none;
+        }
+        .fa{
+            position: relative;
+            top: 10px;
+            color: @theme-color;
+        }
+        span{
+            color: @theme-color;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    }
+    .datas{
+        padding: 70px 0 0 0;
+        text-align: center;
+        &>div{
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .number{
+            font-size: 2em;
+            font-weight: lighter;
+            color: @theme-color;
+            font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+
+            &::after{
+                content: "\A";
+                white-space: pre;
+            }
+
+        }
+        .label{
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: lighter;
+            line-height: 40px;
+            color: @sub-color;
+        }
+    }
+}
+
+// content部分
+#content{
+
+
+    padding: 70px 100px;
+
+    // 大标题
+    .title{
+        text-align: center;
+        font-weight: lighter;
+        color: @title-color;
+    }
+    // 副标题
+    .subtitle{
+        text-align: center;
+        font-size: 1.25em;
+        font-weight: lighter;
+        color: @sub-color;
+    }
+    // 特性框
+    .features{
+        //宽度辅助类
+        .feature-col-1{
+            width: 100%;
+        }
+        .feature-col-2,.feature-col-4,.feature-col-8{
+            width: 50%;
+        }
+        .feature-col-3,.feature-col-6,.feature-col-9{
+            width: 33.3%
+        }
+        .feature-col-5,.feature-col-10{
+            width: 20%;
+        }
+        .clearfix();
+        .feature{
+
+            margin: 0;
+            float: left;
+            box-sizing: border-box;
+            width: 33.3%;
+            padding: 20px 0;
+            text-align: center;
+
+
+            img{
+                height: 70px;
+            }
+            h1{
+                color: @theme-color;
+            }
+            h3{
+                font-size: 1.75em;
+                font-weight: lighter;
+                color: @theme-color;
+                font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+
+            }
+            p{
+                font-size: .95em;
+                line-height: 2em;
+                color: @content-color;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    // 大按钮
+    .button{
+        text-align: center;
+        padding: 60px 0;
+
+        button{
+            background-color: #fff;
+            color: @theme-color;
+            border: 2px solid @theme-color;
+            padding: 13px 35px;
+            outline: none;
+            font-weight: bold;
+            transition: .3s;
+
+            &:hover{
+                background-color: @theme-color;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+// footer部分
+#footer{
+    background-color: #7f8c8d;
+    padding: 30px 0;
+    .links{
+        text-align: center;
+        padding-bottom: 10px;
+        a{
+            font-size: .85em;
+            text-decoration: none;
+            color: #fff;
+            margin: 0 5px;
+            transition: .3s;
+            &:hover{
+                color: @theme-color;
+            }
+        }
+        a>span{
+            font-size: 1.25em;
+        }
+
+    }
+    .text{
+        text-align: center;
+        color: #fff;
+        font-size: .95em;
+        margin: 0;
+        a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+            &:hover{
+                color: @theme-color;
+            }
+
+        }
+    }
+    .copyright{
+        text-align: center;
+        color: white;
+        font-size: .8em;
+        font-weight: lighter;
+        a{
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+            &:hover{
+                color: @theme-color;
+            }
+        }
+    }
+}

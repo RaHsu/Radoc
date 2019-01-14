@@ -80,6 +80,7 @@ exports.copyDir = function(src, dst){
     })
 }
 
+// 复制文件
 exports.copyFile = function(src, dst){
     fs.copyFileSync(src, dst);
 }
