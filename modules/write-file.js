@@ -11,7 +11,7 @@ const config = json.analysis_config(prime_config);
 // 将配置项替换好写入一个md文件
 exports.writeMd = function(file_name){
 
-     const source_path = "./source/";
+     const source_path = "./post_source/";
      const publish_path = "./publish/";
      let out_file_name = file_name.slice(0,-3) + ".html";
 
@@ -51,3 +51,46 @@ exports.writeMd = function(file_name){
          }
      })
  }
+
+// 复制文件夹
+exports.copyDir = function(src, dst, callback){
+    fs.exists(det, function(exists){
+       if(exists){
+           callback(src, dst);
+       }else {
+           fs.mkdir(dst, function(){
+               callback(src, dst);
+           });
+        }
+    });
+};
+
+// 复制文件函数
+exports.copy = function(src, path){
+    fs.readdir(src, function(err, paths){
+        if(err){
+            console.log(src+'复制失败');
+            console.log(err);
+        }
+        paths.forEach(function(path){
+            let _src = src + '/' + path,
+                _dst = dst + '/' + path,
+                readable,writable;
+
+            status(_src, function(err, st){
+                if(err){
+                    throw err;
+                }
+                if(st.isFile){
+                    readable = fs.createReadStream(_src);
+                    writable = fs.createWriteStream(_dst);
+                    readable.pipe(writable);
+                }
+                else if(st.isDirectory()){
+                    exports.copyDir(_src, _dst, copy);
+                }
+            })
+        });
+    })
+}
+
