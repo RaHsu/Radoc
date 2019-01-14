@@ -6,7 +6,7 @@ exports.formExp = function (name) {
     return pattern;
 }
 
-// 将一个字符串中匹配到的差值替换
+// 将一个字符串中匹配到的插值替换
 exports.replace = function (string,replace_pattern,value){
     let out_string = string.replace(exports.formExp(replace_pattern),value);
     return out_string;

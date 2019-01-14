@@ -7,7 +7,7 @@ const json = require("./modules/json");
 const config = json.readConfig('site-config.json');
 
 
-//生成目录
+//读取sourse中的文档md文件并生成目录
 var href, name, a;
 
 fs.readdir('source/', function (err, files) {

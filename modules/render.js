@@ -1,3 +1,4 @@
+// 本模块用于对首页配置文件的解析
 const fs = require('fs');
 const cheerio = require('cheerio');
 const home_config = require('./../home-config.json');
