@@ -85,6 +85,13 @@ exports.copyFile = function(src, dst){
     fs.copyFileSync(src, dst);
 }
 
+// 生成theme-color的函数
+exports.generateThemeColor = function(file,color){
+    let template = `@theme-color: ${color}`;
+
+    fs.writeFileSync(file,template);
+}
+
 
 // // 复制文件夹
 // exports.copyDir = function(src, dst, callback){

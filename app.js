@@ -1,9 +1,16 @@
 const md = require("markdown-it")();
 const fs = require("fs");
 const re = require("./modules/re");
+const wf = require("./modules/write-file");
 
 // 读取配置文件，解析站点配置
 const site_config = require('./site-config.json');
+
+// 将预处理css与js输出到static文件夹
+// css预处理：less输出到static中
+// 读取theme_color并成css
+wf.generateThemeColor('./src/less/theme-color.less',site_config.theme_color);
+
 
 // todo
 //将post_sourse静态文件复制到publish中
@@ -48,16 +55,16 @@ const site_config = require('./site-config.json');
 // })
 
 
-//生成html文件
-fs.readdir('source/', function (err, files) {
-    for (let i = 0; i < files.length; i++) {
-        fs.stat("source/" + files[i], function (err, stat) {
-            if (stat.isFile()) {
-                console.log('publish/' + files[i].slice(0, -3) + '.html');
-                write("source/" + files[i], 'publish/' + files[i].slice(0, -3) + '.html');
-            }
-        });
-    }
-});
+// //生成html文件
+// fs.readdir('source/', function (err, files) {
+//     for (let i = 0; i < files.length; i++) {
+//         fs.stat("source/" + files[i], function (err, stat) {
+//             if (stat.isFile()) {
+//                 console.log('publish/' + files[i].slice(0, -3) + '.html');
+//                 write("source/" + files[i], 'publish/' + files[i].slice(0, -3) + '.html');
+//             }
+//         });
+//     }
+// });
 
 
