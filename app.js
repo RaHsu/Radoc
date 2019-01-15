@@ -13,10 +13,14 @@ const site_config = require('./site-config.json');
 wf.generateThemeColor('./src/less/theme-color.less',site_config.theme_color);
 
 // 将less编译为css
-await wf.less('./src/less/home-theme.less','./static/css/home-theme.css');
+wf.less('./src/less/home-theme.less','./static/css/home-theme.css');
 
 // todo
 //将post_sourse静态文件复制到publish中(包括css,js,font和img)
+wf.copyDir('./static/css','./publish/css');
+wf.copyDir('./static/font','./publish/font');
+wf.copyDir('./static/js','./publish/js');
+wf.copyDir('./static/img','./publish/img');
 
 
 // todo

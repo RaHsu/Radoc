@@ -73,16 +73,20 @@ exports.copyDir = function(src, dst){
             if(st.isFile()){
                 fs.copyFileSync(_src, _dst);
             }else if(st.isDirectory()){
-                fs.mkdirSync(_dst);
-                
-                copyDir(_src, _dst);
+                if(!fs.existsSync(dst)){
+                    fs.mkdirSync(_dst);
+                }
+                exports.copyDir(_src, _dst);
             }
         })
     })
 }
 
-// 复制文件
+// 复制文件(删除原来的文件)
 exports.copyFile = function(src, dst){
+    if(fs.accessSync(dst)){
+        fs.unlinkSync(dst);
+    }
     fs.copyFileSync(src, dst);
 }
 
