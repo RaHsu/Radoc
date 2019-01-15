@@ -3,6 +3,7 @@ const fs = require("fs");
 const re = require("./modules/re");
 const wf = require("./modules/write-file");
 
+
 // 读取配置文件，解析站点配置
 const site_config = require('./site-config.json');
 
@@ -11,9 +12,11 @@ const site_config = require('./site-config.json');
 // 读取theme_color并成css
 wf.generateThemeColor('./src/less/theme-color.less',site_config.theme_color);
 
+// 将less编译为css
+await wf.less('./src/less/home-theme.less','./static/css/home-theme.css');
 
 // todo
-//将post_sourse静态文件复制到publish中
+//将post_sourse静态文件复制到publish中(包括css,js,font和img)
 
 
 // todo

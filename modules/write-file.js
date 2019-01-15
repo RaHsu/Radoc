@@ -2,6 +2,7 @@ const fs = require("fs");
 const json = require("./parse");
 const re = require("./re");
 const md = require("markdown-it")();
+const less = require('less');
 
 // 读取配置文件并解析配置项
 const prime_config = require('./../site-config.json');
@@ -87,9 +88,23 @@ exports.copyFile = function(src, dst){
 
 // 生成theme-color的函数
 exports.generateThemeColor = function(file,color){
-    let template = `@theme-color: ${color}`;
+    let template = `@theme-color: ${color};`;
 
     fs.writeFileSync(file,template);
+    console.log('theme-color文件已生成...');
+}
+
+// 将less转换为css
+exports.less = function(src, dst){
+    console.log('编译less为css...');
+    let lessFile = fs.readFileSync(src,'utf8');
+
+    less.render(lessFile,function(e,output){
+        fs.writeFileSync(dst,output.css);
+        console.log('less编译完成...');
+    })
+    
+
 }
 
 
