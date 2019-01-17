@@ -15,15 +15,18 @@ wf.generateThemeColor('./src/less/theme-color.less',site_config.theme_color);
 // 将less编译为css
 wf.less('./src/less/home-theme.less','./static/css/home-theme.css');
 
-// todo
-//将post_sourse静态文件复制到publish中(包括css,js,font和img)
+//将static静态文件复制到publish中(包括css,js,font和img)
 wf.copyDir('./static/css','./publish/css');
 wf.copyDir('./static/font','./publish/font');
 wf.copyDir('./static/js','./publish/js');
 wf.copyDir('./static/img','./publish/img');
 
-
 // todo
+//将post_source中的img和html原样复制
+wf.copyDir('./post_source/post_img','./publish/post_img');
+wf.copyHtml('./post_source','./publish');
+
+//todo
 // 将post_sourse中的md文件转换为html文件
 
 //读取sourse中的文档md文件并生成目录

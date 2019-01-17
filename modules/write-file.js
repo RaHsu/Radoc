@@ -57,6 +57,7 @@ exports.writeMd = function(file_name){
 
 // 复制文件夹
 exports.copyDir = function(src, dst){
+    console.log('复制' + src + '到' + 'dst' + '...');
     if(!fs.existsSync(dst)){
         fs.mkdirSync(dst);
     }
@@ -84,10 +85,27 @@ exports.copyDir = function(src, dst){
 
 // 复制文件(删除原来的文件)
 exports.copyFile = function(src, dst){
-    if(fs.accessSync(dst)){
+    // if(fs.accessSync(dst)){
+    //     fs.unlinkSync(dst);
+    // }
+    // fs.copyFileSync(src, dst);
+    try{
+        fs.copyFileSync(src, dst);
+    }catch(e){
         fs.unlinkSync(dst);
     }
-    fs.copyFileSync(src, dst);
+}
+
+// 将一个文件夹中的html文件原样复制
+exports.copyHtml = function(src, dst){
+    let _src = src + '/',
+        _dst = dst + '/';
+    let files = fs.readdirSync(src);
+    for (let i of files){
+        if(i.slice(-5) === '.html'){
+            exports.copyFile(_src + i, _dst + i);
+        }
+    }
 }
 
 // 生成theme-color的函数
