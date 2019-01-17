@@ -28,6 +28,7 @@ wf.copyHtml('./post_source','./publish');
 
 //todo
 // 将post_sourse中的md文件转换为html文件
+wf.writeAllMd();
 
 //读取sourse中的文档md文件并生成目录
 // var href, name, a;

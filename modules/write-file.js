@@ -53,6 +53,20 @@ exports.writeMd = function(file_name){
      })
  }
 
+ // 将一个文件夹中的所有md文件转换为html
+ exports.writeAllMd = function(){
+    const source_path = "./post_source/";
+    //const publish_path = "./publish/";
+
+    let files = fs.readdirSync(source_path);
+    for(let i of files){
+        if(i.slice(-3) === '.md'){
+            exports.writeMd(i);
+        }
+    }
+
+ }
+
 
 
 // 复制文件夹
