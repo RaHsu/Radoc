@@ -21,12 +21,10 @@ wf.copyDir('./static/font','./publish/font');
 wf.copyDir('./static/js','./publish/js');
 wf.copyDir('./static/img','./publish/img');
 
-// todo
 //将post_source中的img和html原样复制
 wf.copyDir('./post_source/post_img','./publish/post_img');
 wf.copyHtml('./post_source','./publish');
 
-//todo
 // 将post_sourse中的md文件转换为html文件
 wf.writeAllMd();
 
