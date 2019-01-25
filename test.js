@@ -1,6 +1,5 @@
-const fs = require('fs');
-const md = require("markdown-it")();
-const file = require("./modules/write-file");
-const re = require("./modules/re");
+const renderHome = require('./modules/home-render');
 
-file.writeMd("前端问题总结.md");
+renderHome.renderHome();
+
+
