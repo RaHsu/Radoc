@@ -79,5 +79,39 @@
                 "label":"stars"
             }
         ]
-    }
+    },
+    "content":[
+        {
+            "title":"特性",
+            "subtitle":"Radoc拥有令人期待的所有特性。",
+            "features":[
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"chrome"
+                    },
+                    "title":"使用简单",
+                    "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
+                },
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"chrome"
+                    },
+                    "title":"使用简单",
+                    "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
+                },
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"chrome"
+                    },
+                    "title":"使用简单",
+                    "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
+                }
+            ],
+            "button":"阅读文档"
+        }
+    ]
+    
 }

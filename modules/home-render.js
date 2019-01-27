@@ -40,13 +40,14 @@ exports.renderHome = function(){
     };
     
     // 将模板加载为dom树
-    let $ = cheerio.load(fs.readFileSync('./../static/template/home.html'));
+    let $ = cheerio.load(fs.readFileSync('./static/template/home.html'));
     
     
     // 对各个模块的解析
     function render(){
         setHeader();
         setBanner();
+        setContent();
     }
     // header部分
     function setHeader(){
@@ -199,6 +200,48 @@ exports.renderHome = function(){
             }
         }
     }
+
+    // content部分
+    function setContent(){
+        if(home_config.content){
+            $('body').append(template.content.self);
+            for(let i of home_config.content){
+                setContentTitle(i);
+                setContentSubtitle(i);
+                //setContentFeatures(i);
+                //setContentButton(i);
+            }
+        }
+    }
+
+    // content的title部分
+    function setContentTitle(content){
+        if(content.title){
+            let title = `<h1 class="title">${content.title}</h1>`;
+            $('#content').append(title);
+        }
+    }
+
+    // content的subtitle部分
+    function setContentSubtitle(content){
+        if(content.subtitle){
+            let subtitle = `<p class="subtitle">${content.subtitle}</p>`;
+            $('#content').append(subtitle);
+        }
+    }
+
+    // content的features部分
+    function setContentFeatures(content){
+
+    }
+    function setContentFeature(feature){
+        if(feature.image){
+            if(feature.image.type === 'icon'){
+
+            }
+        }
+    }
+
     render();
     
     //console.log($.html());
@@ -207,7 +250,7 @@ exports.renderHome = function(){
     //console.log(home_config.header.logo[0].src);
     
     let writeStream = $.html();
-    fs.writeFileSync("./../out.html",writeStream);
+    fs.writeFileSync("./out.html",writeStream);
     
 }
 
