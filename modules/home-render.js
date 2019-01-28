@@ -12,8 +12,8 @@ exports.renderHome = function(){
             span:'<span></span>',
             a:'<a></a>',
             ul:'<ul></ul>',
-            h1:'<h1></h1>'
-    
+            h1:'<h1></h1>',
+            h3:'<h3></h3>'
         },
         header:{
             self:'<header id="header"></header>',
@@ -30,7 +30,8 @@ exports.renderHome = function(){
         },
         content:{
             self:'<div id="content"></div>',
-            features:'<div id="features"></div>',
+            features:'<div class="features"></div>',
+            feature:'<div class="feature"></div>',
             button:'<div class="button"></div>'
         },
         footer:{
@@ -208,8 +209,8 @@ exports.renderHome = function(){
             for(let i of home_config.content){
                 setContentTitle(i);
                 setContentSubtitle(i);
-                //setContentFeatures(i);
-                //setContentButton(i);
+                setContentFeatures(i.features);
+                setContentButton(i);
             }
         }
     }
@@ -231,14 +232,50 @@ exports.renderHome = function(){
     }
 
     // content的features部分
-    function setContentFeatures(content){
+    function setContentFeatures(features){
+        let featuresDiv = cheerio.load(template.content.features);
+        
+        for(let i of features){
+            featuresDiv('.features').append(getContentFeature(i));
+        }
 
+        $('#content').append(featuresDiv.html());
     }
-    function setContentFeature(feature){
+    function getContentFeature(feature){
+        let featureDiv = cheerio.load(template.content.feature);
+
         if(feature.image){
             if(feature.image.type === 'icon'){
-
+                let icon = cheerio.load('<h1><i></i></h1>');
+                icon('i').addClass('fa fa-2x fa-' + feature.image.name);
+                featureDiv('.feature').append(icon.html());
             }
+            if(feature.image.type === 'img'){
+                let img = cheerio.load(template.basic.img);
+                img('img').attr('src',template.image.src);
+                featureDiv('.feature').append(img.html());
+            }
+        }
+        if(feature.title){
+            let title = cheerio.load(template.basic.h3);
+            title('h3').text(feature.title);
+            featureDiv('.feature').append(title.html());
+        }
+        if(feature.description){
+            let description = cheerio.load(template.basic.p);
+            description('p').text(feature.description);
+            featureDiv('.feature').append(description.html());
+        }
+        return featureDiv.html();
+    }
+
+    // content的button部分
+    function setContentButton(content){
+        if(content.button){
+            let button = `<div class="button">
+                            <a href="${content.button.href}"><button>${content.button.text}</button></a>
+                          </div>`;
+            $('#content').append(button);
         }
     }
 
