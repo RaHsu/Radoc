@@ -49,6 +49,7 @@ exports.renderHome = function(){
         setHeader();
         setBanner();
         setContent();
+        setFooter();
     }
     // header部分
     function setHeader(){
@@ -278,6 +279,69 @@ exports.renderHome = function(){
             $('#content').append(button);
         }
     }
+
+    function setFooter(){
+        if(home_config.footer){
+            $('body').append(template.footer.self);
+            setFooterLinks();
+            setFooterInstruction();
+            setFooterCopyright();
+        }
+    }
+
+    function setFooterLinks(){
+        
+        if(home_config.footer.links){
+            for(let i of home_config.footer.links){
+                let linksDiv = cheerio.load(template.footer.links);
+
+                if(i.type === 'icon'){
+                    for(let j of i.link){
+                        let link = `<a href="${j.href}"><span class="fa fa-${j.name}"></a>`;
+                        linksDiv('.links').append(link);
+                    }
+                }
+                if(i.type === 'text'){
+                    for(let j of i.link){
+                        let link = `<a href="${j.href}">${j.text}</a>`;
+                        linksDiv('.links').append(link);
+                    }
+                }
+
+                $('#footer').append(linksDiv.html());
+            }
+        }
+    }
+
+    function setFooterInstruction(){
+        if(home_config.footer.instruction){
+            for(let i of home_config.footer.instruction){
+                if(i.href){
+                    let a = `<p class="text"><a href="${i.href}">${i.text}</a></p>`;
+                    $('#footer').append(a);
+                }else{
+                    let p = `<p class="text">${i.text}</p>`;
+                    $('#footer').append(p);
+                }
+            }
+        }
+    }
+
+    function setFooterCopyright(){
+        if(home_config.footer.copyright){
+            
+            for(let i of home_config.footer.copyright){
+                if(i.href){
+                    let a = `<p class="copyright"><a href="${i.href}">${i.text}</a></p>`;
+                    $('#footer').append(a);
+                }else{
+                    let p = ` <p class="copyright">${i.text}</p>`;
+                    $('#footer').append(p);
+                }
+            }
+        }
+    }
+
 
     render();
     

@@ -146,6 +146,57 @@
                 "text":"团队"
             }
         }
-    ]
+    ],
+    "footer":{
+        "links":[
+            {
+                "type":"icon",
+                "link":[
+                    {
+                        "name":"qq",
+                        "href":"http://www.baidu.com"
+                    },{
+                        "name":"steam",
+                        "href":"http://www.baidu.com"
+                    },{
+                        "name":"apple",
+                        "href":"http://www.baidu.com"
+                    }
+                ]
+            },{
+                "type":"text",
+                "link":[
+                    {
+                        "text":"文档",
+                        "href":"http://www.baidu.com"
+                    },{
+                        "text":"文档",
+                        "href":"http://www.baidu.com"
+                    },{
+                        "text":"文档",
+                        "href":"http://www.baidu.com"
+                    },{
+                        "text":"文档",
+                        "href":"http://www.baidu.com"
+                    }
+                ]
+            }
+        ],
+        "instruction":[
+            {
+                "text":"遵循  MIT 开源协议",
+                "href":"http://www.baidu.com"
+            }
+        ],
+        "copyright":[
+            {
+                "text":"Copyright © 2018 Ra Hsu. This website is open source. "
+            },
+            {
+                "text":"京ICP备15031610号",
+                "href":"https://github.com/RaHsu/Radoc"
+            }
+        ]
+    }
     
 }
