@@ -1,0 +1,1 @@
+var contianerHeight = document.getElementById('container');
