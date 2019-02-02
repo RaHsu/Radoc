@@ -1,5 +1,32 @@
 {
     "theme":"apollo",
     "code_theme":"arduino-light",
-    "theme_color":"#f00"
+    "theme_color":"#f00",
+    "catalog":[
+        {
+            "title":"基础",
+            "src":"install.html",
+            "children":[
+                {
+                    "title":"安装",
+                    "src":"install.html",
+                    "children":[
+                       {
+                        "title":"Vue Devtools",
+                        "src":"fdhsuahfe"
+                       },
+                       {
+                        "title":"Vue Devtools",
+                        "src":"fdhsuahfe"
+                       },
+                       {
+                        "title":"Vue Devtools",
+                        "src":"fdhsuahfe"
+                       }
+
+                    ]
+                }
+            ]
+        }
+    ]
 }

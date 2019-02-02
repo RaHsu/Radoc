@@ -8,6 +8,9 @@
 :-|:-
 apollo（一个类似于Vue文档的主题）|apollo(defualt)
 
+#### theme_color 主题颜色
+网站的主题颜色，你可以使用你喜欢的颜色作为主题颜色，支持16进制颜色表示
+
 #### code_theme 代码主题
 Radoc也提供了很多代码主题，你可以选择你文档中使用的代码高亮主题，这部分成果来自[highlight.js](https://highlightjs.org/)。目前提供的代码高亮样式有：
 
@@ -92,3 +95,11 @@ vs2015|vs2015
 xcode|xcode
 xt256|xt256
 zenburn|zenburn
+
+#### catalog 文档目录
+这是你文档目录的配置，在文档页将由你的配置来生成目录，目录最多支持到三级目录。
+属性|说明|数据类型
+:-|:-|:-
+title|在目录页显示的标题|string
+src|文档的路径，请保证你将md文件放置到了post_sourse文件夹中，当src不存在时，标题将以文本显示|string
+children|子文档(一个或多个)，每个文档也包含title和src|array
