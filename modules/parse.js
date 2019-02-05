@@ -20,5 +20,8 @@ exports.analysis_config = function(config){
     //theme_color解析
     out_config.theme_color = config.theme_color;
 
+    // catalog解析
+    out_config.catalog = config.catalog;
+
     return out_config;
 }
