@@ -175,6 +175,13 @@ body{
 
 // 目录部分
 
+// 用于链接的doclink
+.doc-link{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 #sidebar{
     width: 230px;
     padding: 20px 70px;
@@ -191,11 +198,9 @@ body{
             
 
             .title1{
-                a{
-                    text-decoration: none;
+                h3{
                     color: @title-color;
                     margin-bottom: 18px;
-                    display: block;
                     span{
                         font-size: 20px;
                         font-weight: bolder;
@@ -214,19 +219,19 @@ body{
                     }
                     
                     
-                    a{
-                        span{
-                            padding: 2px 0px;
-                            font-size: 16px;
-                            font-weight: 500;
-                            color: @sub-color;
-                            &:hover{
-                                border-bottom: 2px solid @theme-color;
-                            }
-                            
+                   
+                    span{
+                        padding: 2px 0px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: @sub-color;
+                        &:hover{
+                            border-bottom: 2px solid @theme-color;
                         }
                         
                     }
+                        
+                    
                     .title3{
                         display: none;
                         &:hover{
@@ -255,11 +260,10 @@ body{
                     & .title3{
                         display: block;
                     }
-                    a {
-                        span{
-                            font-weight: 600;
-                            color: @theme-color;
-                        }
+                    
+                    span{
+                        font-weight: 600;
+                        color: @theme-color;
                     }
                     
                 }
