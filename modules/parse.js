@@ -23,5 +23,8 @@ exports.analysis_config = function(config){
     // catalog解析
     out_config.catalog = config.catalog;
 
+    // first_show解析
+    out_config.first_show = config.first_show;
+
     return out_config;
 }

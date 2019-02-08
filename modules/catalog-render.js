@@ -18,29 +18,27 @@ exports.renderCatalog = function(){
    for(let i of catalog){
       let title1 = cheerio.load('<div class="title1"></div>');
       if(i.title && i.src){
-         let thisTitle = `<a href="${i.src}"><span>${i.title}</span></a>`;
+         let thisTitle = `<h3><span class="doc-link" data-src="${i.src}">${i.title}</span></h3>`;
          title1('.title1').append(thisTitle);
       }else{
-         let thisTitle = `<a><span>${i.title}</span></a>`;
+         let thisTitle = `<h3><span>${i.title}</span></h3>`;
          title1('.title1').append(thisTitle);
       }
       if(i.children){
-         console.log('c');
-         
          for(let j of i.children){
             let title2 = cheerio.load('<div class="title2"></div>');
             if(j.title && j.src){
-               let thisTitle = `<a href="${j.src}"><span>${j.title}</span></a>`;
+               let thisTitle = `<span class="doc-link" data-src="${j.src}">${j.title}</span>`;
                title2('.title2').append(thisTitle);
             }else{
-               let thisTitle = `<a><span>${j.title}</span></a>`;
+               let thisTitle = `<span>${j.title}</span>`;
                title2('.title2').append(thisTitle);
             }
             if(j.children){
                let title3 = cheerio.load('<div class="title3"></div>');
                for(let k of j.children){
                   if(k.title && k.src){
-                     let thisTitle = `<a href="${k.src}"><p>${k.title}</p></a>`;
+                     let thisTitle = `<p class="doc-link" data-src="${k.src}">${k.title}</p>`;
                      title3('.title3').append(thisTitle);
                   }else{
                      let thisTitle = `<p>${k.title}</p>`;
@@ -56,7 +54,11 @@ exports.renderCatalog = function(){
       $('#catalog').append(title1.html());
 
    }
+
+   // 设置首个展示的文档
+   $('#container').append(`<iframe src="${site_config.first_show}" frameborder="0" id="doc">`)
+
    let writeStream = $.html();
    
-   fs.writeFileSync("./out1.html",writeStream);
+   fs.writeFileSync("./publish/out1.html",writeStream);
 }

@@ -18,7 +18,9 @@ for(var i = 0;i < links.length;i++){
         }
         this.classList.add('active');
         // 使父元素高亮
-        
+        if(this.parentNode.parentNode.className === 'title2'){
+            this.parentNode.parentNode.classList.add('active');
+        }
     }
 }
 

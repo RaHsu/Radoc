@@ -5,28 +5,29 @@
     "catalog":[
         {
             "title":"基础",
-            "src":"install.html",
+            "src":"test.html",
             "children":[
                 {
                     "title":"安装",
-                    "src":"install.html",
+                    "src":"test.html",
                     "children":[
                        {
                         "title":"Vue Devtools",
-                        "src":"fdhsuahfe"
+                        "src":"1.html"
                        },
                        {
                         "title":"Vue Devtools",
-                        "src":"fdhsuahfe"
+                        "src":"1.html"
                        },
                        {
                         "title":"Vue Devtools",
-                        "src":"fdhsuahfe"
+                        "src":"1.html"
                        }
 
                     ]
                 }
             ]
         }
-    ]
+    ],
+    "first_show":"1.html"
 }
