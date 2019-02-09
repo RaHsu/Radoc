@@ -11,6 +11,9 @@ exports.analysis_config = function(config){
     let css_path = 'css/';
     let code_style_path = 'css/code_styles/';
 
+    // title解析
+    out_config.title = config.title;
+
     //theme解析
     out_config.theme = css_path + config.theme + '.css';
 

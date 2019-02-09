@@ -132,12 +132,12 @@ exports.generateThemeColor = function(file,color){
 
 // 将less转换为css
 exports.less = function(src, dst){
-    console.log('编译less为css...');
+    console.log(`编译${src}为css...`);
     let lessFile = fs.readFileSync(src,'utf8');
 
     less.render(lessFile,function(e,output){
         fs.writeFileSync(dst,output.css);
-        console.log('less编译完成...');
+        console.log(`${src}编译完成...`);
     })
     
 

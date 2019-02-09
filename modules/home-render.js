@@ -1,7 +1,10 @@
 // 本模块用于对首页配置文件的解析
 const fs = require('fs');
 const cheerio = require('cheerio');
+const pa = require("./parse");
+const prime_config = require('./../site-config.json');
 const home_config = require('./../home-config.json');
+const site_config = pa.analysis_config(prime_config);
 
 exports.renderHome = function(){
     let template = {
@@ -46,10 +49,17 @@ exports.renderHome = function(){
     
     // 对各个模块的解析
     function render(){
+        setTitle();
         setHeader();
         setBanner();
         setContent();
         setFooter();
+    }
+    
+    // title部分
+    function setTitle(){
+        $('title').text(site_config.title);
+        console.log('2');
     }
     // header部分
     function setHeader(){
