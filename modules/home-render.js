@@ -59,7 +59,6 @@ exports.renderHome = function(){
     // title部分
     function setTitle(){
         $('title').text(site_config.title);
-        console.log('2');
     }
     // header部分
     function setHeader(){
