@@ -360,7 +360,7 @@ exports.renderHome = function(){
     //console.log(home_config.header.logo[0].src);
     
     let writeStream = $.html();
-    fs.writeFileSync("./out.html",writeStream);
+    fs.writeFileSync("./publish/home.html",writeStream);
     
 }
 

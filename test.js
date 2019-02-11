@@ -1,5 +1,8 @@
-const renderHome = require('./modules/home-render');
+const catalogRender = require('./modules/catalog-render');
+//const homeRender = require('./modules/home-render');
 
-renderHome.renderHome();
+
+catalogRender.renderCatalog();
+//homeRender.renderHome();
 
 

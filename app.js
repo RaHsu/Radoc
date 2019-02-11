@@ -2,13 +2,13 @@ const md = require("markdown-it")();
 const fs = require("fs");
 const re = require("./modules/re");
 const wf = require("./modules/write-file");
-const pa = require("./parse");
+const pa = require("./modules/parse");
 const homeRender = require("./modules/home-render");
 const catalogRender = require("./modules/catalog-render");
 
 
 // 读取配置文件，解析站点配置
-const prime_config = require('./../site-config.json');
+const prime_config = require('./site-config.json');
 const site_config = pa.analysis_config(prime_config);
 
 

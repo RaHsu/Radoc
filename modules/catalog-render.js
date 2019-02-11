@@ -140,5 +140,5 @@ exports.renderCatalog = function(){
 
    let writeStream = $.html();
    
-   fs.writeFileSync("./publish/out1.html",writeStream);
+   fs.writeFileSync("./publish/guide.html",writeStream);
 }
