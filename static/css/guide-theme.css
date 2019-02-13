@@ -360,7 +360,7 @@ body {
   font-size: 2em;
   float: left;
   line-height: 1.2em;
-  color: #42b983;
+  color: #f00;
 }
 #header .links {
   height: 40px;
@@ -378,7 +378,7 @@ body {
   transition: 0.3s;
 }
 #header .links a:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #f00;
 }
 #header .links .dropdown {
   margin-right: 10px;
@@ -421,7 +421,7 @@ body {
   border-bottom: 2px solid transparent;
 }
 #header .links ul li :hover {
-  color: #42b983;
+  color: #f00;
   border-bottom: 2px solid transparent;
 }
 #container {
@@ -454,7 +454,7 @@ body {
   padding: 2px 0px;
 }
 #sidebar #sidebar-inner #catalog .title1 h3 span:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #f00;
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 {
   margin: 10px 10px;
@@ -470,7 +470,7 @@ body {
   color: #80848f;
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 span:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #f00;
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 .title3 {
   display: none;
@@ -483,19 +483,19 @@ body {
   font-size: 14px;
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 .title3 p:hover {
-  color: #42b983;
+  color: #f00;
   font-weight: 600;
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 .title3 .active {
   font-weight: 600;
-  color: #42b983;
+  color: #f00;
 }
 #sidebar #sidebar-inner #catalog .title1 .active .title3 {
   display: block;
 }
 #sidebar #sidebar-inner #catalog .title1 .active span {
   font-weight: 600;
-  color: #42b983;
+  color: #f00;
 }
 #doc {
   overflow: hidden;
