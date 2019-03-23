@@ -99,10 +99,6 @@ exports.copyDir = function(src, dst){
 
 // 复制文件(删除原来的文件)
 exports.copyFile = function(src, dst){
-    // if(fs.accessSync(dst)){
-    //     fs.unlinkSync(dst);
-    // }
-    // fs.copyFileSync(src, dst);
     try{
         fs.copyFileSync(src, dst);
     }catch(e){

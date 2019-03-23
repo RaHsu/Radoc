@@ -21,6 +21,8 @@ wf.generateThemeColor('./src/less/theme-color.less',site_config.theme_color);
 wf.less('./src/less/home-theme.less','./static/css/home-theme.css');
 // 将guide-theme.less编译成css
 wf.less('./src/less/guide-theme.less','./static/css/guide-theme.css');
+wf.less('./src/less/apollo.less','./static/css/apollo.css');
+
 // todo less编译必须在文件复制之前
 
 //将static静态文件复制到publish中(包括css,js,font和img)
@@ -43,3 +45,4 @@ homeRender.renderHome();
 catalogRender.renderCatalog();
 
 
+ 
