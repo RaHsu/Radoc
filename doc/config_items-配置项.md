@@ -105,3 +105,4 @@ zenburn|zenburn
 title|在目录页显示的标题|string
 src|文档的路径，请保证你将md文件放置到了post_sourse文件夹中，当src不存在时，标题将以文本显示|string
 children|子文档(一个或多个)，每个文档也包含title和src|array
+
