@@ -4,7 +4,7 @@
         "logo":[
             {
                 "type":"img",
-                "src":"trecer.jpg"
+                "src":"img/trecer.jpg"
             },{
                 "type":"text",
                 "content":"Radoc"
@@ -27,13 +27,13 @@
                     "text":"多语言",
                     "children":[
                         {
-                            "href":"http://www.baidu.com",
+                            "href":"/guide.html",
                             "text":"学习"
                         },{
-                            "href":"www.baidu.com",
+                            "href":"/guide.html",
                             "text":"团队"
                         },{
-                            "href":"www.baidu.com",
+                            "href":"/guide.html",
                             "text":"生态系统"
                         }
                     ]
@@ -55,7 +55,7 @@
             {
                 "type":"basic",
                 "text":"快速入门",
-                "href":"http://www.qq.com"
+                "href":"/guide.html"
             },{
                 "type":"github",
                 "href":"https://github.com/RaHsu/Radoc"
@@ -63,17 +63,17 @@
         ],
         "datas":[
             {
-                "data":"1000+",
+                "data":"10+",
                 "label":"stars"
             },{
-                "data":"1000+",
-                "label":"stars"
+                "data":"1.0.0",
+                "label":"当前版本"
             },{
                 "data":"1000+",
-                "label":"stars"
+                "label":"下载量"
             },{
-                "data":"1000+",
-                "label":"stars"
+                "data":"JavaScript",
+                "label":"language"
             }
         ]
     },
@@ -85,7 +85,15 @@
                 {
                     "image":{
                         "type":"icon",
-                        "name":"bath"
+                        "name":"rocket"
+                    },
+                    "title":"超快速度",
+                    "description":"得益于node.js的超快速度，radoc可以在几秒内就生成你想要的网站"
+                },
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"check-square-o"
                     },
                     "title":"使用简单",
                     "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
@@ -93,57 +101,15 @@
                 {
                     "image":{
                         "type":"icon",
-                        "name":"bed"
+                        "name":"microchip"
                     },
-                    "title":"使用简单",
-                    "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
-                },
-                {
-                    "image":{
-                        "type":"icon",
-                        "name":"bomb"
-                    },
-                    "title":"使用简单",
-                    "description":"只需要少量的配置，你就可以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
+                    "title":"自定义组件",
+                    "description":"首页自定义可选组件，打造你想要的首页"
                 }
             ],
             "button":{
-                "href":"https://github.com/RaHsu/Radoc",
-                "text":"文档"
-            }
-        },
-        {
-            "title":"wrerwr",
-            "subtitle":"Radoc拥有令人rew特性。",
-            "features":[
-                {
-                    "image":{
-                        "type":"icon",
-                        "name":"adjust"
-                    },
-                    "title":"使rew单",
-                    "description":"只需要少量rew以建立起一个自己的文档网站，不需要再去编写HTML或服务器程序。"
-                },
-                {
-                    "image":{
-                        "type":"icon",
-                        "name":"anchor"
-                    },
-                    "title":"使用rew单",
-                    "description":"Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。"
-                },
-                {
-                    "image":{
-                        "type":"icon",
-                        "name":"chrome"
-                    },
-                    "title":"rewre单",
-                    "description":"Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。"
-                }
-            ],
-            "button":{
-                "href":"https://github.com/RaHsu/Radoc",
-                "text":"团队"
+                "href":"/guide.html",
+                "text":"查看文档"
             }
         }
     ],
@@ -154,30 +120,30 @@
                 "link":[
                     {
                         "name":"qq",
-                        "href":"http://www.baidu.com"
+                        "href":"#"
                     },{
-                        "name":"steam",
-                        "href":"http://www.baidu.com"
+                        "name":"weixin",
+                        "href":"#"
                     },{
-                        "name":"apple",
-                        "href":"http://www.baidu.com"
+                        "name":"github",
+                        "href":"https://github.com/RaHsu"
                     }
                 ]
             },{
                 "type":"text",
                 "link":[
                     {
-                        "text":"文档",
-                        "href":"http://www.baidu.com"
+                        "text":"Font Awesome",
+                        "href":"http://fontawesome.dashgame.com/"
                     },{
-                        "text":"文档",
-                        "href":"http://www.baidu.com"
+                        "text":"Highlight.js",
+                        "href":"https://github.com/highlightjs/highlight.js"
                     },{
-                        "text":"文档",
-                        "href":"http://www.baidu.com"
+                        "text":"cheerio",
+                        "href":"https://www.npmjs.com/package/cheerio"
                     },{
-                        "text":"文档",
-                        "href":"http://www.baidu.com"
+                        "text":"markdowm-it",
+                        "href":"https://www.npmjs.com/package/markdown-it"
                     }
                 ]
             }
@@ -191,10 +157,6 @@
         "copyright":[
             {
                 "text":"Copyright © 2018 Ra Hsu. This website is open source. "
-            },
-            {
-                "text":"京ICP备15031610号",
-                "href":"https://github.com/RaHsu/Radoc"
             }
         ]
     }

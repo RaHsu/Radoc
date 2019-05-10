@@ -323,6 +323,9 @@ html {
   display: table;
   clear: both;
 }
+#header .logo:hover {
+  cursor: pointer;
+}
 #header .logo span {
   float: left;
   display: table-cell;

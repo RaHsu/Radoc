@@ -16,16 +16,28 @@ for(var i = 0;i < links.length;i++){
         for(var j =0;j < links.length;j++){
             links[j].className = 'doc-link';
         }
+        console.log(this);
         this.classList.add('active');
         // 使父元素高亮
-        if(this.parentNode.parentNode.className === 'title2'){
+        console.log(this.parentNode.parentNode.className);
+        if(this.parentNode.parentNode.className === 'title1'){
+            console.log("active");
             this.parentNode.parentNode.classList.add('active');
         }
     }
 }
 
-// 使文章与目录对应
-var docName =  document.getElementById('doc').src;
-var htmlRxp = /publish\/\S*.html/img;
-var htmlName = htmlRxp.exec(docName)[0].slice(8,-5);
-console.log(htmlName);
+// // 使文章与目录对应
+// var docName =  document.getElementById('doc').src;
+// //var htmlRxp = /publish\/\S*.html/img;
+// var htmlRxp = /\/\S*.html/img;
+// console.log(docName);
+// console.log(htmlRxp.exec(docName));
+// var htmlName = htmlRxp.exec(docName)[0].slice(8,-5);
+// console.log(htmlName);
+
+// logo点击事件
+var logo = document.getElementsByClassName("logo")[0];
+logo.onclick = function(){
+    window.location = "/home.html";
+}

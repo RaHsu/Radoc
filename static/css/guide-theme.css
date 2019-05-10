@@ -434,6 +434,7 @@ body {
 #sidebar {
   width: 230px;
   padding: 20px 70px;
+  padding-right: 30px;
   position: absolute;
   left: 0;
   float: left;
@@ -488,6 +489,13 @@ body {
 }
 #sidebar #sidebar-inner #catalog .title1 .title2 .title3 .active {
   font-weight: 600;
+  color: #f00;
+}
+#sidebar #sidebar-inner #catalog .title1 .title2 .active {
+  font-weight: 600;
+  color: #f00;
+}
+#sidebar #sidebar-inner #catalog .title1 .active {
   color: #f00;
 }
 #sidebar #sidebar-inner #catalog .title1 .active .title3 {

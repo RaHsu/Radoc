@@ -29,7 +29,9 @@ wf.less('./src/less/apollo.less','./static/css/apollo.css');
 wf.copyDir('./static/css','./publish/css');
 wf.copyDir('./static/font','./publish/font');
 wf.copyDir('./static/js','./publish/js');
+wf.copyDir('./post_source/post_img','./publish/img');
 wf.copyDir('./static/img','./publish/img');
+
 
 //将post_source中的img和html原样复制
 wf.copyDir('./post_source/post_img','./publish/post_img');

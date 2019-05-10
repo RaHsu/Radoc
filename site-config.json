@@ -1,34 +1,49 @@
 {
     "title":"Radoc",
-    "theme":"apollo",
+    "theme":"github",
     "code_theme":"arduino-light",
     "theme_color":"#f00",
     "catalog":[
         {
-            "title":"基础",
-            "src":"test.html",
+            "title":"安装",
+            "src":"install-安装.html"
+            
+        },{
+            "title":"快速上手",
+            "src":"quick_start-快速上手.html"
+        },{
+            "title":"配置项",
             "children":[
                 {
-                    "title":"安装",
-                    "src":"fun fact about null.html",
-                    "children":[
-                       {
-                        "title":"你不知道的JSON",
-                        "src":"你不知道的JSON.html"
-                       },
-                       {
-                        "title":"关于浏览器内核",
-                        "src":"关于浏览器内核.html"
-                       },
-                       {
-                        "title":"前端问题总结",
-                        "src":"前端问题总结.html"
-                       }
-
-                    ]
+                    "title":"网站配置项",
+                    "src":"config_items-网站配置项.html"
+                },{
+                    "title":"首页自定义组件",
+                    "src":"home_config-首页自定义组件.html"
                 }
             ]
+        },
+        {
+            "title":"写作指导",
+            "src":"writing-写作指导.html"
+        },{
+            "title":"贡献引导",
+            "children":[
+                {
+                    "title":"项目结构",
+                    "src":"structure-项目结构.html"
+                },{
+                    "title":"模块设置",
+                    "src":"modules-模块设置.html"
+                },{
+                    "title":"样式引导",
+                    "src":"style-样式引导.html"
+                }
+            ]
+        },{
+            "title":"致谢",
+            "src":"acknowledgement-致谢.html"
         }
     ],
-    "first_show":"你不知道的JSON.html"
+    "first_show":"install-安装.html"
 }
