@@ -1,7 +1,7 @@
 {
     "title":"Radoc",
-    "theme":"github",
-    "code_theme":"arduino-light",
+    "theme":"apollo",
+    "code_theme":"atom-one-dark",
     "theme_color":"#f00",
     "catalog":[
         {
@@ -20,6 +20,9 @@
                 },{
                     "title":"首页自定义组件",
                     "src":"home_config-首页自定义组件.html"
+                },{
+                    "title":"文档主题",
+                    "src":"theme-文档主题.html"
                 }
             ]
         },

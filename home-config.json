@@ -15,13 +15,13 @@
             "children":[
                 {
                     "type":"link",
-                    "href":"#",
-                    "text":"学习"
+                    "href":"https://github.com/RaHsu/Radoc",
+                    "text":"github"
                 },
                 {
                     "type":"link",
-                    "href":"#",
-                    "text":"团队"
+                    "href":"http://123.207.226.113:4000",
+                    "text":"博客"
                 },{
                     "type":"dropdown",
                     "text":"多语言",
@@ -101,10 +101,40 @@
                 {
                     "image":{
                         "type":"icon",
+                        "name":"cloud-upload"
+                    },
+                    "title":"一键部署",
+                    "description":"不需要繁琐的服务器配置，只需一条命令就可以部署你的网站"
+                }
+            ]
+        },
+        {
+            "title":"外观",
+            "subtitle":"打造属于你的文档网站",
+            "features":[
+                {
+                    "image":{
+                        "type":"icon",
                         "name":"microchip"
                     },
-                    "title":"自定义组件",
-                    "description":"首页自定义可选组件，打造你想要的首页"
+                    "title":"首页自定义",
+                    "description":"提供首页自定义组件，打造你想要的首页"
+                },
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"laptop"
+                    },
+                    "title":"文档主题",
+                    "description":"提供10+文档主题及40+代码高亮方案，让自己的文档与众不同"
+                },
+                {
+                    "image":{
+                        "type":"icon",
+                        "name":"paint-brush"
+                    },
+                    "title":"主题颜色",
+                    "description":"万千主题颜色随心选"
                 }
             ],
             "button":{

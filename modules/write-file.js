@@ -44,11 +44,11 @@ exports.writeMd = function(file_name){
      //写入文件
      fs.writeFile(publish_path + out_file_name,writeStream,function(err){
          if(err){
-             console.log(out_file_name+'写入失败');
+             console.error(out_file_name+' writen fail!');
              console.log(err);
          }
          else{
-             console.log(out_file_name+"写入成功");
+             console.log(out_file_name+" writen succuess ...");
          }
      })
  }
@@ -71,7 +71,7 @@ exports.writeMd = function(file_name){
 
 // 复制文件夹
 exports.copyDir = function(src, dst){
-    console.log('复制' + src + '到' + 'dst' + '...');
+    console.log('copy' + src + 'to' + dst + '...');
     if(!fs.existsSync(dst)){
         fs.mkdirSync(dst);
     }
@@ -87,6 +87,8 @@ exports.copyDir = function(src, dst){
 
             if(st.isFile()){
                 fs.copyFileSync(_src, _dst);
+                console.log("copy" + _src + "to" + _dst + "...");
+
             }else if(st.isDirectory()){
                 if(!fs.existsSync(dst)){
                     fs.mkdirSync(_dst);
@@ -101,6 +103,7 @@ exports.copyDir = function(src, dst){
 exports.copyFile = function(src, dst){
     try{
         fs.copyFileSync(src, dst);
+        console.log("copy" + src + "to" + dst);
     }catch(e){
         fs.unlinkSync(dst);
     }
@@ -123,17 +126,17 @@ exports.generateThemeColor = function(file,color){
     let template = `@theme-color: ${color};`;
 
     fs.writeFileSync(file,template);
-    console.log('theme-color文件已生成...');
+    console.log('theme-color file has built...');
 }
 
 // 将less转换为css
 exports.less = function(src, dst){
-    console.log(`编译${src}为css...`);
+    console.log(`compile ${src} to css...`);
     let lessFile = fs.readFileSync(src,'utf8');
 
     less.render(lessFile,function(e,output){
         fs.writeFileSync(dst,output.css);
-        console.log(`${src}编译完成...`);
+        console.log(`${src}compile finished...`);
     })
     
 

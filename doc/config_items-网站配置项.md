@@ -4,13 +4,30 @@
 网站的title，即显示在浏览器标签页头上的title。
 
 #### theme 主题
-主题决定了文档正文的样式。目前提供的样式有：
+主题决定了文档正文的样式。目前提供的主题有：
 
 主题名称|值
 :-|:-
 apollo（一个类似于Vue文档的主题）|apollo(defualt)
+academic（学术主题）|academic
+dropbox|dropbox
+github（github的官方样式）|github
+gothic|gothic
+han|han
+law|law
+lostkeys|lostkeys
+minimalism|mini
+misty|misty
+monomspace|monospace
+pixyll|pixyll
+quartz|quartz
+refine|refine
+scribble|scribble
+
+>  具体的样式预览请到[文档主题](/theme-文档主题)中查看。
 
 #### theme_color 主题颜色
+
 网站的主题颜色，你可以使用你喜欢的颜色作为主题颜色，支持16进制颜色表示
 
 #### code_theme 代码主题

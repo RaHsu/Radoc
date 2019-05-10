@@ -10,7 +10,7 @@
 如，你有一张名为test.jpg的图片文件，应将其放入post_source/post_img文件夹中，然后在文章中如此引用：
 
 ```markdown
-![测试图片](img/test.jpg)
+![测试图片](post_img/test.jpg)
 ```
 
 ### 链接
