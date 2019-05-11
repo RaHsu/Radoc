@@ -214,7 +214,7 @@ exports.renderHome = function(){
 
     // content部分
     function setContent(){
-        if(home_config.content){
+        if(home_config.content && home_config.content.length >0){
             $('body').append(template.content.self);
             for(let i of home_config.content){
                 setContentTitle(i);

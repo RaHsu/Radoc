@@ -12,10 +12,7 @@ Radoc提供丰富的组件让你可以自定义你的首页，这些组件你可
 你可以设置符合你自己喜好的主题颜色，主题颜色会在组件中有所体现。
 > 注意：在选择主题颜色时，请尽量选择与白色具有对比度的颜色，这样在视觉的展示上会更为合理。
 
-主题颜色默认为：
-<div style="background-color:#4fc08d;font-size:1.3em;height:2em;text-align:center;vertical-align:middle;line-height:.7em;border-radius:.2em;">
-    <span style="color:white;">#4fc08d</span>
-</div>
+主题颜色默认为：#f00（红色）
 
 ### Icon 关于图标
 Radoc使用的是[Font Awesome](http://fontawesome.dashgame.com/)中的图标，你可以到[它们的官方网站](http://fontawesome.dashgame.com/)中选择你要使用的图标，那里有很多丰富多彩的图标，在使用图标的时候，你只需要在Json文件中输入页面上展示出的图标名字就可以了。

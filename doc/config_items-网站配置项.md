@@ -24,7 +24,7 @@ quartz|quartz
 refine|refine
 scribble|scribble
 
->  具体的样式预览请到[文档主题](/theme-文档主题)中查看。
+>  具体的样式预览请到[文档主题](/theme-文档主题.html)中查看。
 
 #### theme_color 主题颜色
 
