@@ -343,7 +343,7 @@ html {
   font-size: 2em;
   float: left;
   line-height: 1.2em;
-  color: #f00;
+  color: #00bc12;
 }
 #header .links {
   height: 40px;
@@ -361,7 +361,7 @@ html {
   transition: 0.3s;
 }
 #header .links a:hover {
-  border-bottom: 2px solid #f00;
+  border-bottom: 2px solid #00bc12;
 }
 #header .links .dropdown {
   margin-right: 10px;
@@ -403,7 +403,7 @@ html {
   border-bottom: 2px solid transparent;
 }
 #header .links ul li :hover {
-  color: #f00;
+  color: #00bc12;
   border-bottom: 2px solid transparent;
 }
 #banner {
@@ -422,7 +422,7 @@ html {
 }
 #banner .logo i {
   font-size: 7em;
-  color: #f00;
+  color: #00bc12;
 }
 #banner .intro {
   font-size: 2em;
@@ -437,9 +437,9 @@ html {
 }
 #banner .button-area button {
   display: inline;
-  background-color: #f00;
+  background-color: #00bc12;
   color: #fff;
-  border: 2px solid #f00;
+  border: 2px solid #00bc12;
   border-radius: 40px;
   font-size: 1.05em;
   font-weight: bold;
@@ -451,10 +451,10 @@ html {
 #banner .button-area .fa {
   position: relative;
   top: 10px;
-  color: #f00;
+  color: #00bc12;
 }
 #banner .button-area span {
-  color: #f00;
+  color: #00bc12;
   font-weight: bold;
   padding-left: 10px;
 }
@@ -469,7 +469,7 @@ html {
 #banner .datas .number {
   font-size: 2em;
   font-weight: lighter;
-  color: #f00;
+  color: #00bc12;
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 }
 #banner .datas .number::after {
@@ -531,12 +531,12 @@ html {
   height: 70px;
 }
 #content .features .feature h1 {
-  color: #f00;
+  color: #00bc12;
 }
 #content .features .feature h3 {
   font-size: 1.75em;
   font-weight: lighter;
-  color: #f00;
+  color: #00bc12;
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol-apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 }
 #content .features .feature p {
@@ -551,15 +551,15 @@ html {
 }
 #content .button button {
   background-color: #fff;
-  color: #f00;
-  border: 2px solid #f00;
+  color: #00bc12;
+  border: 2px solid #00bc12;
   padding: 13px 35px;
   outline: none;
   font-weight: bold;
   transition: 0.3s;
 }
 #content .button button:hover {
-  background-color: #f00;
+  background-color: #00bc12;
   color: #fff;
   cursor: pointer;
 }
@@ -579,7 +579,7 @@ html {
   transition: 0.3s;
 }
 #footer .links a:hover {
-  color: #f00;
+  color: #00bc12;
 }
 #footer .links a > span {
   font-size: 1.25em;
@@ -597,7 +597,7 @@ html {
   transition: 0.3s;
 }
 #footer .text a:hover {
-  color: #f00;
+  color: #00bc12;
 }
 #footer .copyright {
   text-align: center;
@@ -611,5 +611,5 @@ html {
   transition: 0.3s;
 }
 #footer .copyright a:hover {
-  color: #f00;
+  color: #00bc12;
 }

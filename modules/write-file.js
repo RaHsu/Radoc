@@ -106,7 +106,7 @@ exports.copyDir = function(src, dst){
 exports.copyFile = function(src, dst){
     try{
         fs.copyFileSync(src, dst);
-        console.log("copy" + src + "to" + dst);
+        console.log("copy " + src + " to " + dst);
     }catch(e){
         fs.unlinkSync(dst);
     }
@@ -139,7 +139,7 @@ exports.less = function(src, dst){
 
     less.render(lessFile,function(e,output){
         fs.writeFileSync(dst,output.css);
-        console.log(`${src}compile finished...`);
+        console.log(`${src} compile finished...`);
     })
     
 
