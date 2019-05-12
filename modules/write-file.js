@@ -72,6 +72,9 @@ exports.writeMd = function(file_name){
 // 复制文件夹
 exports.copyDir = function(src, dst){
     console.log('copy' + src + 'to' + dst + '...');
+    if(!fs.existsSync(src)){
+        fs.mkdirSync(src);
+    }
     if(!fs.existsSync(dst)){
         fs.mkdirSync(dst);
     }
