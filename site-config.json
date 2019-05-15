@@ -1,8 +1,8 @@
 {
     "title":"Radoc",
-    "theme":"refine",
+    "theme":"apollo",
     "code_theme":"atom-one-dark",
-    "theme_color":"#00bc12",
+    "theme_color":"#f00",
     "catalog":[
         {
             "title":"安装",
