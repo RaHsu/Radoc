@@ -17,6 +17,9 @@ Radoc提供丰富的组件让你可以自定义你的首页，这些组件你可
 ### Icon 关于图标
 Radoc使用的是[Font Awesome](http://fontawesome.dashgame.com/)中的图标，你可以到[它们的官方网站](http://fontawesome.dashgame.com/)中选择你要使用的图标，那里有很多丰富多彩的图标，在使用图标的时候，你只需要在Json文件中输入页面上展示出的图标名字就可以了。
 
+### Iamge 关于图片
+首页中要使用的图片（如logo图片等）请置于./static/img目录中。
+
 ### Header组件
 Header为首页的导航栏，在这里可以提供一些链接信息。
 
